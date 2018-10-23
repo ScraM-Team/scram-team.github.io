@@ -16,7 +16,7 @@ function We($t){var a,b,c;if(Eh($t,Ib)==0&&$t.constructor.$meta.item===null){Zg(
 function Ub(){E.call(this);}
 var Mh=null;function Ub_$callClinit(){Ub_$callClinit=Ub.$clinit=function(){};
 Fe();}
-function Ff(a){var b,c,d;Ub_$callClinit();b=Mh;c=Jh(0);d=b.createElement($rt_ustr(c));Mh.body.appendChild(d);if(("geolocation" in navigator?1:0)==0){c=Mh;b=Jh(1);b=c.createTextNode($rt_ustr(b));d.appendChild(b);}else{c=navigator.geolocation;b=Nh(d);c.getCurrentPosition(Sg(b,"handlePosition"));}}
+function Ff(a){var b,c,d;Ub_$callClinit();b=Mh;c=Jh(0);d=b.createElement($rt_ustr(c));Mh.body.appendChild(d);c=Mh;b=Jh(1);b=c.createTextNode($rt_ustr(b));d.appendChild(b);if(("geolocation" in navigator?1:0)==0){b=Mh;c=Jh(2);b=b.createTextNode($rt_ustr(c));d.appendChild(b);}else{alert("Geo availble!");c=navigator.geolocation;b=Nh(d);c.getCurrentPosition(Sg(b,"handlePosition"));}}
 function Jf(){Ub_$callClinit();return Mh;}
 function Fe(){Mh=window.document;}
 function Oc(){E.call(this);}
@@ -24,11 +24,27 @@ function Sg(a,b){var name='jso$functor$'+b;if(!a[name]){var fn=function(){return
 function Yg(a,b){if(a===null)return null;var result={};result[b]=a;return result;}
 function Vc(){E.call(this);}
 function M(){E.call(this);}
+function L(){E.call(this);}
+function Vb(){E.call(this);}
+function Sb(){E.call(this);}
+function Qb(){E.call(this);}
+function Rb(){E.call(this);}
+function Lb(){E.call(this);}
+function Xb(){E.call(this);}
+function Nb(){E.call(this);}
+function Pc(){E.call(this);}
+function Rd($t,a,b){$t.ec($rt_str(a),Yg(b,"handleEvent"));}
+function Ld($t,a,b,c){$t.gc($rt_str(a),Yg(b,"handleEvent"),c?1:0);}
+function Mg($t,a){return !!$t.hc(a);}
+function Qe($t,a,b){$t.ic($rt_str(a),Yg(b,"handleEvent"));}
+function Nf($t,a){return $t.jc(a);}
+function Md($t){return $t.kc();}
+function Re($t,a,b,c){$t.lc($rt_str(a),Yg(b,"handleEvent"),c?1:0);}
 function Pb(){E.call(this);}
 function Zc(){E.call(this);this.z=null;}
 function Nh(b){var $r=new Zc();Xf($r,b);return $r;}
 function Xf($t,a){$t.z=a;Xe($t);}
-function Qf($t,a){var b,c;b=a.coords;c=$t.z;a=Jf();b=Df(Wf(Pf(Wf(Pf(Oh(),Jh(2)),b.latitude),Jh(3)),b.longitude));a=a.createTextNode($rt_ustr(b));c.appendChild(a);}
+function Qf($t,a){var b,c;b=a.coords;c=$t.z;a=Jf();b=Df(Wf(Pf(Wf(Pf(Oh(),Jh(3)),b.latitude),Jh(4)),b.longitude));a=a.createTextNode($rt_ustr(b));c.appendChild(a);}
 function Ig($t,a){Qf($t,a);}
 function Kb(){E.call(this);}
 function Ic(){E.call(this);this.ac=null;}
@@ -51,7 +67,7 @@ function Dg($t,a){if(a>=0&&a<$t.i.data.length){return $t.i.data[a];}Zg(Th());}
 function C($t){return $t.i.data.length;}
 function Gd($t){return $t.i.data.length!=0?0:1;}
 function D($t,a,b,c,d){var e,f;if(a>=0&&a<=b&&b<=$t.Tb()&&d>=0){c=c.data;if((d+(b-a|0)|0)<=c.length){while(a<b){e=d+1|0;f=a+1|0;c[d]=$t.E(a);d=e;a=f;}return;}}Zg(Uh());}
-function Og($t,a){var b,c;if($t===a){return 1;}if(a instanceof Db==0){return 0;}b=a;if(C(b)!=C($t)){return 0;}c=0;while(true){if(c>=C(b)){return 1;}if(Dg($t,c)!=Dg(b,c)){break;}c=c+1|0;}return 0;}
+function Og($t,a){var b,c;if($t===a){return 1;}if(a instanceof Db==0){return 0;}b=a;if(C(b)!=C($t)){return 0;}c=0;while(c<C(b)){if(Dg($t,c)!=Dg(b,c)){return 0;}c=c+1|0;}return 1;}
 function Sf($t){var a,b,c,d;if($t.B==0){a=$t.i.data;b=a.length;c=0;while(c<b){d=a[c];$t.B=(31*$t.B|0)+d|0;c=c+1|0;}}return $t.B;}
 function Kd(a){Db_$callClinit();return a;}
 function G($t){var a;a=Zf(Rh,$t);if(a!==null){$t=a;}else{Wd(Rh,$t,$t);}return $t;}
@@ -86,7 +102,7 @@ function Qc($t,a,b){var c;S_$callClinit();Xe($t);$t.G=Kh();$t.w=1;$t.Db=b;$t.O=a
 function I(a){S_$callClinit();if(Ci!==a){Ci=a;}Ci.y=Ce();}
 function Ke(){S_$callClinit();return Bi;}
 function H(){S_$callClinit();return Ci;}
-function Qd(){Bi=Fi(Kd(Jh(4)));Ci=Bi;Di=Long_fromInt(1);Ei=1;}
+function Qd(){Bi=Fi(Kd(Jh(5)));Ci=Bi;Di=Long_fromInt(1);Ei=1;}
 function V(){E.call(this);}
 var Hi=null;var Ii=null;var Ji=null;function V_$callClinit(){V_$callClinit=V.$clinit=function(){};
 Yd();}
@@ -108,22 +124,6 @@ function Gg($t,a){Gf($t,a);}
 function Nc(){P.call(this);}
 function Si(b){var $r=new Nc();Zd($r,b);return $r;}
 function Zd($t,a){Gf($t,a);}
-function L(){E.call(this);}
-function Vb(){E.call(this);}
-function Sb(){E.call(this);}
-function Qb(){E.call(this);}
-function Rb(){E.call(this);}
-function Lb(){E.call(this);}
-function Xb(){E.call(this);}
-function Nb(){E.call(this);}
-function Pc(){E.call(this);}
-function Rd($t,a,b){$t.hc($rt_str(a),Yg(b,"handleEvent"));}
-function Ld($t,a,b,c){$t.jc($rt_str(a),Yg(b,"handleEvent"),c?1:0);}
-function Mg($t,a){return !!$t.kc(a);}
-function Qe($t,a,b){$t.lc($rt_str(a),Yg(b,"handleEvent"));}
-function Nf($t,a){return $t.mc(a);}
-function Md($t){return $t.nc();}
-function Re($t,a,b,c){$t.oc($rt_str(a),Yg(b,"handleEvent"),c?1:0);}
 function Wb(){E.call(this);}
 function Gc(){E.call(this);}
 function Vh(){var $r=new Gc();He($r);return $r;}
@@ -185,7 +185,7 @@ function Kj(b){var $r=new J();Ec($r,b);return $r;}
 function Mc($t){J_$callClinit();Ec($t,16);}
 function Ec($t,a){J_$callClinit();Xe($t);$t.H=$rt_createCharArray(a);}
 function Id($t,a){return Tf($t,$t.Fb,a);}
-function Vd($t,a,b){var c,d,e;if(a>=0&&a<=$t.Fb){if(b===null){b=Kd(Jh(5));}else if(Gd(b)!=0){return $t;}Se($t,$t.Fb+C(b)|0);c=$t.Fb-1|0;while(c>=a){$t.H.data[c+C(b)|0]=$t.H.data[c];c=c+ -1|0;}$t.Fb=$t.Fb+C(b)|0;c=0;while(c<C(b)){d=$t.H.data;e=a+1|0;d[a]=Dg(b,c);c=c+1|0;a=e;}return $t;}Zg(Th());}
+function Vd($t,a,b){var c,d,e;if(a>=0&&a<=$t.Fb){if(b===null){b=Kd(Jh(6));}else if(Gd(b)!=0){return $t;}Se($t,$t.Fb+C(b)|0);c=$t.Fb-1|0;while(c>=a){$t.H.data[c+C(b)|0]=$t.H.data[c];c=c+ -1|0;}$t.Fb=$t.Fb+C(b)|0;c=0;while(c<C(b)){d=$t.H.data;e=a+1|0;d[a]=Dg(b,c);c=c+1|0;a=e;}return $t;}Zg(Th());}
 function Hg($t,a){return Me($t,$t.Fb,a);}
 function Ng($t,a,b){var c,d,e,f,g,h,i,j,k,l,m,n,o;if(b===0.0){Ne($t,a,a+3|0);c=$t.H.data;d=a+1|0;c[a]=48;c=$t.H.data;a=d+1|0;c[d]=46;$t.H.data[a]=48;return $t;}if(b===0.0){Ne($t,a,a+4|0);c=$t.H.data;d=a+1|0;c[a]=45;c=$t.H.data;a=d+1|0;c[d]=48;c=$t.H.data;d=a+1|0;c[a]=46;$t.H.data[d]=48;return $t;}if((isNaN(b)?1:0)!=0){Ne($t,a,a+3|0);c=$t.H.data;d=a+1|0;c[a]=78;c=$t.H.data;a=d+1|0;c[d]=97;$t.H.data[a]=78;return $t;}if((!isFinite(b)?1:0)!=0){if(b>0.0){Ne($t,a,a+8|0);d=a;}else{Ne($t,a,a+9|0);c=$t.H.data;d=a+1|
 0;c[a]=45;}c=$t.H.data;a=d+1|0;c[d]=73;c=$t.H.data;d=a+1|0;c[a]=110;c=$t.H.data;a=d+1|0;c[d]=102;c=$t.H.data;d=a+1|0;c[a]=105;c=$t.H.data;a=d+1|0;c[d]=110;c=$t.H.data;d=a+1|0;c[a]=105;c=$t.H.data;a=d+1|0;c[d]=116;$t.H.data[a]=121;return $t;}e=0;f=1;if(b<0.0){e=1;b= -b;f=2;}g=1;if(b>=1.0){h=256;i=0;j=1.0;d=Dj.data.length-1|0;while(d>=0){k=i|h;if(k<=308&&Dj.data[d]*j<=b){j=j*Dj.data[d];i=k;}h=h>>1;d=d+ -1|0;}l=Long_fromNumber(b/j*1.0E15+0.5);}else{i=256;h=0;j=1.0;d=Fj.data.length-1|0;while(d>=0){k=h|i;if(k<=308
@@ -218,10 +218,10 @@ function Mj(b,c){var $r=new U();Fc($r,b,c);return $r;}
 function Fc($t,a,b){var c,d,e;U_$callClinit();c=b.data;Xe($t);If(a);d=c.length;e=0;while(e<d){If(c[e]);e=e+1|0;}$t.Q=a;$t.I=b.a();}
 function If(a){var b,c;U_$callClinit();if(Gd(a)!=0){Zg(Nj(a));}if(Kf(Dg(a,0))==0){Zg(Nj(a));}b=1;while(b<C(a)){a:{c=Dg(a,b);switch(c){case 43:case 45:case 46:case 58:case 95:break;default:if(Kf(c)!=0){break a;}else{Zg(Nj(a));}}}b=b+1|0;}}
 function Kf(a){U_$callClinit();return !(a>=48&&a<=57)&&!(a>=97&&a<=122)&&a<65&&a>90?0:1;}
-function Nd(){Lj=Wh();Wd(Lj,Jh(6),Aj());}
+function Nd(){Lj=Wh();Wd(Lj,Jh(7),Aj());}
 function Sc(){U.call(this);}
 function Aj(){var $r=new Sc();Oe($r);return $r;}
-function Oe($t){Fc($t,Jh(6),Dh(Db,0));}
+function Oe($t){Fc($t,Jh(7),Dh(Db,0));}
 function X(){Q.call(this);}
 function Wi(){var $r=new X();Ze($r);return $r;}
 function Ze($t){Jd($t);}
@@ -248,21 +248,21 @@ function Z(){Cb.call(this);}
 var Pj=0.0;var Qj=null;function Z_$callClinit(){Z_$callClinit=Z.$clinit=function(){};
 Ee();}
 function Ee(){Pj=NaN;Qj=Ch($rt_doublecls());}
-$rt_metadata([E,"java.lang.Object",0,[],3072,3,0,["b",function(){Xe(this);},"a",function(){return We(this);}],Ub,"teavm.location.Main",E,[],3104,3,Ub_$callClinit,[],Oc,"org.teavm.jso.impl.JS",E,[],3104,0,0,[],Vc,"org.teavm.jso.browser.Navigator",E,[],3104,3,0,[],M,"org.teavm.jso.JSObject",E,[],65,3,0,[],Pb,"org.teavm.jso.geolocation.PositionHandler",E,[M],65,3,0,[],Zc,"teavm.location.Main$1",E,[Pb],3104,0,0,["X",function(b){Xf(this,b);},"tb",function(b){Qf(this,b);},"P",function(b){return Ig(this,b);}],Kb,"java.lang.reflect.AnnotatedElement",
-E,[],65,3,0,[],Ic,"java.lang.Class",E,[Kb],3072,3,0,["hb",function(b){Yf(this,b);}],Xc,"org.teavm.platform.Platform",E,[],3104,3,0,[],O,"java.io.Serializable",E,[],65,3,0,[],W,"java.lang.Comparable",E,[],65,3,0,[],Fb,"java.lang.CharSequence",E,[],65,3,0,[],Db,"java.lang.String",E,[O,W,Fb],3072,3,Db_$callClinit,["Z",function(b){Cc(this,b);},"Ob",function(b,c,d){Dd(this,b,c,d);},"E",function(b){return Dg(this,b);},"Tb",function(){return C(this);},"Cb",function(){return Gd(this);},"Qb",function(b,c,d,e){D(this,
-b,c,d,e);},"Gb",function(b){return Og(this,b);},"C",function(){return Sf(this);},"t",function(){return G(this);}],N,"java.lang.Throwable",E,[],3072,3,0,["b",function(){Ue(this);},"c",function(b){Vf(this,b);},"m",function(){return Cg(this);}],T,"java.lang.Exception",N,[],3072,3,0,["b",function(){Fg(this);}],Q,"java.lang.RuntimeException",T,[],3072,3,0,["b",function(){Jd(this);}],Jb,"java.lang.IndexOutOfBoundsException",Q,[],3072,3,0,["b",function(){Kg(this);}],Ib,"java.lang.Cloneable",E,[],65,3,0,[],Hc,"java.lang.CloneNotSupportedException",
-T,[],3072,3,0,["b",function(){Ef(this);}],Yb,"java.lang.Runnable",E,[],65,3,0,[],S,"java.lang.Thread",E,[Yb],3072,3,S_$callClinit,["c",function(b){Tc(this,b);},"Ab",function(b,c){Qc(this,b,c);}],V,"java.lang.System",E,[],3104,3,V_$callClinit,[],Gb,"java.lang.Error",N,[],3072,3,0,["c",function(b){Hd(this,b);}],R,"java.lang.LinkageError",Gb,[],3072,3,0,["c",function(b){Uf(this,b);}],Dc,"java.lang.NoClassDefFoundError",R,[],3072,3,0,[],P,"java.lang.IncompatibleClassChangeError",R,[],3072,3,0,["c",function(b){Gf(this,
-b);}],Cd,"java.lang.NoSuchFieldError",P,[],3072,3,0,["c",function(b){Gg(this,b);}],Nc,"java.lang.NoSuchMethodError",P,[],3072,3,0,["c",function(b){Zd(this,b);}],L,"org.teavm.jso.dom.events.EventTarget",E,[M],65,3,0,[],Vb,"org.teavm.jso.dom.events.FocusEventTarget",E,[L],65,3,0,[],Sb,"org.teavm.jso.dom.events.MouseEventTarget",E,[L],65,3,0,[],Qb,"org.teavm.jso.dom.events.KeyboardEventTarget",E,[L],65,3,0,[],Rb,"org.teavm.jso.dom.events.LoadEventTarget",E,[L],65,3,0,[],Lb,"org.teavm.jso.browser.WindowEventTarget",
-E,[L,Vb,Sb,Qb,Rb],65,3,0,[],Xb,"org.teavm.jso.browser.StorageProvider",E,[],65,3,0,[],Nb,"org.teavm.jso.core.JSArrayReader",E,[M],65,3,0,[],Pc,"org.teavm.jso.browser.Window",E,[M,Lb,Xb,Nb],3073,3,0,["s",function(b,c){return Rd(this,b,c);},"Eb",function(b,c,d){return Ld(this,b,c,d);},"Mb",function(b){return Mg(this,b);},"r",function(b,c){return Qe(this,b,c);},"Bb",function(b){return Nf(this,b);},"Kb",function(){return Md(this);},"Ib",function(b,c,d){return Re(this,b,c,d);}],Wb,"java.util.Comparator",E,[],65,
-3,0,[],Gc,"java.lang.String$<clinit>$lambda$_0",E,[Wb],0,3,0,["b",function(){He(this);}],Tb,"java.util.Map",E,[],65,3,0,[],Ab,"java.util.AbstractMap",E,[Tb],3073,3,0,["b",function(){Td(this);}],Bc,"java.util.HashMap",Ab,[Ib,O],3072,3,0,["yb",function(b){return Mf(this,b);},"b",function(){Ae(this);},"g",function(b){De(this,b);},"D",function(b,c){Cf(this,b,c);},"wb",function(){Sd(this);},"Wb",function(b){return Zf(this,b);},"Yb",function(b){return Od(this,b);},"J",function(b,c,d){return Pd(this,b,c,d);},"l",function()
-{return Of(this);},"Hb",function(b,c){return Wd(this,b,c);},"sb",function(b,c){return Pe(this,b,c);},"xb",function(b,c,d){return Jg(this,b,c,d);},"j",function(b){Le(this,b);},"ub",function(){Ge(this);}],Ob,"java.lang.AutoCloseable",E,[],65,3,0,[],Bb,"java.io.Closeable",E,[Ob],65,3,0,[],Zb,"java.io.Flushable",E,[],65,3,0,[],K,"java.io.OutputStream",E,[Bb,Zb],3073,3,0,["b",function(){Fd(this);}],Eb,"java.io.FilterOutputStream",K,[],3072,3,0,["Jb",function(b){Eg(this,b);}],Lc,"java.io.PrintStream",Eb,[],3072,3,
-0,["bc",function(b,c){Hf(this,b,c);}],Wc,"java.lang.ConsoleOutputStreamStdout",K,[],3072,0,0,["b",function(){Bg(this);}],Uc,"java.lang.ConsoleOutputStreamStderr",K,[],3072,0,0,["b",function(){Rf(this);}],Hb,"java.io.InputStream",E,[Bb],3073,3,0,["b",function(){Te(this);}],Jc,"java.lang.ConsoleInputStream",Hb,[],3072,0,0,["b",function(){Xd(this);}],J,"java.lang.AbstractStringBuilder",E,[O,Fb],3072,0,J_$callClinit,["b",function(){Mc(this);},"g",function(b){Ec(this,b);},"Vb",function(b){return Id(this,b);},"e",
-function(b,c){return Vd(this,b,c);},"U",function(b){return Hg(this,b);},"d",function(b,c){return Ng(this,b,c);},"h",function(b){Be(this,b);},"f",function(){return Lg(this);},"Lb",function(b,c){Ne(this,b,c);}],Ac,"java.lang.Appendable",E,[],65,3,0,[],Rc,"java.lang.StringBuilder",J,[Ac],3072,3,0,["b",function(){Ag(this);},"rb",function(b){return Pf(this,b);},"Sb",function(b){return Wf(this,b);},"mb",function(b,c){return Bf(this,b,c);},"p",function(b,c){return Je(this,b,c);},"f",function(){return Df(this);},"h",
-function(b){Se(this,b);},"d",function(b,c){return Me(this,b,c);},"e",function(b,c){return Tf(this,b,c);}],U,"java.nio.charset.Charset",E,[W],3073,3,U_$callClinit,["eb",function(b,c){Fc(this,b,c);}],Sc,"java.nio.charset.impl.UTF8Charset",U,[],3072,3,0,["b",function(){Oe(this);}],X,"java.lang.IllegalArgumentException",Q,[],3072,3,0,["b",function(){Ze(this);}],Ad,"java.nio.charset.IllegalCharsetNameException",X,[],3072,3,0,["c",function(b){Ud(this,b);}],Mb,"java.util.Map$Entry",E,[],65,3,0,[],Y,"java.util.MapEntry",
+$rt_metadata([E,"java.lang.Object",0,[],3072,3,0,["b",function(){Xe(this);},"a",function(){return We(this);}],Ub,"teavm.location.Main",E,[],3104,3,Ub_$callClinit,[],Oc,"org.teavm.jso.impl.JS",E,[],3104,0,0,[],Vc,"org.teavm.jso.browser.Navigator",E,[],3104,3,0,[],M,"org.teavm.jso.JSObject",E,[],65,3,0,[],L,"org.teavm.jso.dom.events.EventTarget",E,[M],65,3,0,[],Vb,"org.teavm.jso.dom.events.FocusEventTarget",E,[L],65,3,0,[],Sb,"org.teavm.jso.dom.events.MouseEventTarget",E,[L],65,3,0,[],Qb,"org.teavm.jso.dom.events.KeyboardEventTarget",
+E,[L],65,3,0,[],Rb,"org.teavm.jso.dom.events.LoadEventTarget",E,[L],65,3,0,[],Lb,"org.teavm.jso.browser.WindowEventTarget",E,[L,Vb,Sb,Qb,Rb],65,3,0,[],Xb,"org.teavm.jso.browser.StorageProvider",E,[],65,3,0,[],Nb,"org.teavm.jso.core.JSArrayReader",E,[M],65,3,0,[],Pc,"org.teavm.jso.browser.Window",E,[M,Lb,Xb,Nb],3073,3,0,["s",function(b,c){return Rd(this,b,c);},"Eb",function(b,c,d){return Ld(this,b,c,d);},"Mb",function(b){return Mg(this,b);},"r",function(b,c){return Qe(this,b,c);},"Bb",function(b){return Nf(this,
+b);},"Kb",function(){return Md(this);},"Ib",function(b,c,d){return Re(this,b,c,d);}],Pb,"org.teavm.jso.geolocation.PositionHandler",E,[M],65,3,0,[],Zc,"teavm.location.Main$1",E,[Pb],3104,0,0,["X",function(b){Xf(this,b);},"tb",function(b){Qf(this,b);},"P",function(b){return Ig(this,b);}],Kb,"java.lang.reflect.AnnotatedElement",E,[],65,3,0,[],Ic,"java.lang.Class",E,[Kb],3072,3,0,["hb",function(b){Yf(this,b);}],Xc,"org.teavm.platform.Platform",E,[],3104,3,0,[],O,"java.io.Serializable",E,[],65,3,0,[],W,"java.lang.Comparable",
+E,[],65,3,0,[],Fb,"java.lang.CharSequence",E,[],65,3,0,[],Db,"java.lang.String",E,[O,W,Fb],3072,3,Db_$callClinit,["Z",function(b){Cc(this,b);},"Ob",function(b,c,d){Dd(this,b,c,d);},"E",function(b){return Dg(this,b);},"Tb",function(){return C(this);},"Cb",function(){return Gd(this);},"Qb",function(b,c,d,e){D(this,b,c,d,e);},"Gb",function(b){return Og(this,b);},"C",function(){return Sf(this);},"t",function(){return G(this);}],N,"java.lang.Throwable",E,[],3072,3,0,["b",function(){Ue(this);},"c",function(b){Vf(this,
+b);},"m",function(){return Cg(this);}],T,"java.lang.Exception",N,[],3072,3,0,["b",function(){Fg(this);}],Q,"java.lang.RuntimeException",T,[],3072,3,0,["b",function(){Jd(this);}],Jb,"java.lang.IndexOutOfBoundsException",Q,[],3072,3,0,["b",function(){Kg(this);}],Ib,"java.lang.Cloneable",E,[],65,3,0,[],Hc,"java.lang.CloneNotSupportedException",T,[],3072,3,0,["b",function(){Ef(this);}],Yb,"java.lang.Runnable",E,[],65,3,0,[],S,"java.lang.Thread",E,[Yb],3072,3,S_$callClinit,["c",function(b){Tc(this,b);},"Ab",function(b,
+c){Qc(this,b,c);}],V,"java.lang.System",E,[],3104,3,V_$callClinit,[],Gb,"java.lang.Error",N,[],3072,3,0,["c",function(b){Hd(this,b);}],R,"java.lang.LinkageError",Gb,[],3072,3,0,["c",function(b){Uf(this,b);}],Dc,"java.lang.NoClassDefFoundError",R,[],3072,3,0,[],P,"java.lang.IncompatibleClassChangeError",R,[],3072,3,0,["c",function(b){Gf(this,b);}],Cd,"java.lang.NoSuchFieldError",P,[],3072,3,0,["c",function(b){Gg(this,b);}],Nc,"java.lang.NoSuchMethodError",P,[],3072,3,0,["c",function(b){Zd(this,b);}],Wb,"java.util.Comparator",
+E,[],65,3,0,[],Gc,"java.lang.String$<clinit>$lambda$_0",E,[Wb],0,3,0,["b",function(){He(this);}],Tb,"java.util.Map",E,[],65,3,0,[],Ab,"java.util.AbstractMap",E,[Tb],3073,3,0,["b",function(){Td(this);}],Bc,"java.util.HashMap",Ab,[Ib,O],3072,3,0,["yb",function(b){return Mf(this,b);},"b",function(){Ae(this);},"g",function(b){De(this,b);},"D",function(b,c){Cf(this,b,c);},"wb",function(){Sd(this);},"Wb",function(b){return Zf(this,b);},"Yb",function(b){return Od(this,b);},"J",function(b,c,d){return Pd(this,b,c,d);
+},"l",function(){return Of(this);},"Hb",function(b,c){return Wd(this,b,c);},"sb",function(b,c){return Pe(this,b,c);},"xb",function(b,c,d){return Jg(this,b,c,d);},"j",function(b){Le(this,b);},"ub",function(){Ge(this);}],Ob,"java.lang.AutoCloseable",E,[],65,3,0,[],Bb,"java.io.Closeable",E,[Ob],65,3,0,[],Zb,"java.io.Flushable",E,[],65,3,0,[],K,"java.io.OutputStream",E,[Bb,Zb],3073,3,0,["b",function(){Fd(this);}],Eb,"java.io.FilterOutputStream",K,[],3072,3,0,["Jb",function(b){Eg(this,b);}],Lc,"java.io.PrintStream",
+Eb,[],3072,3,0,["bc",function(b,c){Hf(this,b,c);}],Wc,"java.lang.ConsoleOutputStreamStdout",K,[],3072,0,0,["b",function(){Bg(this);}],Uc,"java.lang.ConsoleOutputStreamStderr",K,[],3072,0,0,["b",function(){Rf(this);}],Hb,"java.io.InputStream",E,[Bb],3073,3,0,["b",function(){Te(this);}],Jc,"java.lang.ConsoleInputStream",Hb,[],3072,0,0,["b",function(){Xd(this);}],J,"java.lang.AbstractStringBuilder",E,[O,Fb],3072,0,J_$callClinit,["b",function(){Mc(this);},"g",function(b){Ec(this,b);},"Vb",function(b){return Id(this,
+b);},"e",function(b,c){return Vd(this,b,c);},"U",function(b){return Hg(this,b);},"d",function(b,c){return Ng(this,b,c);},"h",function(b){Be(this,b);},"f",function(){return Lg(this);},"Lb",function(b,c){Ne(this,b,c);}],Ac,"java.lang.Appendable",E,[],65,3,0,[],Rc,"java.lang.StringBuilder",J,[Ac],3072,3,0,["b",function(){Ag(this);},"rb",function(b){return Pf(this,b);},"Sb",function(b){return Wf(this,b);},"mb",function(b,c){return Bf(this,b,c);},"p",function(b,c){return Je(this,b,c);},"f",function(){return Df(this);
+},"h",function(b){Se(this,b);},"d",function(b,c){return Me(this,b,c);},"e",function(b,c){return Tf(this,b,c);}],U,"java.nio.charset.Charset",E,[W],3073,3,U_$callClinit,["eb",function(b,c){Fc(this,b,c);}],Sc,"java.nio.charset.impl.UTF8Charset",U,[],3072,3,0,["b",function(){Oe(this);}],X,"java.lang.IllegalArgumentException",Q,[],3072,3,0,["b",function(){Ze(this);}],Ad,"java.nio.charset.IllegalCharsetNameException",X,[],3072,3,0,["c",function(b){Ud(this,b);}],Mb,"java.util.Map$Entry",E,[],65,3,0,[],Y,"java.util.MapEntry",
 E,[Mb,Ib],3072,0,0,["nb",function(b,c){Ye(this,b,c);}],Bd,"java.util.HashMap$HashEntry",Y,[],3072,0,0,["kb",function(b,c){Lf(this,b,c);}],Yc,"java.lang.StringIndexOutOfBoundsException",Jb,[],3072,3,0,["b",function(){Pg(this);}],Kc,"java.lang.Math",E,[],3104,3,0,[],Ed,"java.util.Arrays",E,[],3072,3,0,[],Cb,"java.lang.Number",E,[O],3073,3,0,[],Z,"java.lang.Double",Cb,[W],3072,3,Z_$callClinit,[]]);
-$rt_stringPool(["p","Location is unavailable!","Lat/Lon: ","/","main","null","UTF-8"]);
+$rt_stringPool(["p","Checking location...","Location is unavailable!","Lat/Lon: ","/","main","null","UTF-8"]);
 var main=Ff;
-(function(){var c;c=Zc.prototype;c.handlePosition=c.P;c=Pc.prototype;c.removeEventListener=c.s;c.removeEventListener=c.Eb;c.dispatchEvent=c.Mb;c.getLength=c.Kb;c.addEventListener=c.r;c.get=c.Bb;c.addEventListener=c.Ib;})();
+(function(){var c;c=Pc.prototype;c.removeEventListener=c.s;c.removeEventListener=c.Eb;c.dispatchEvent=c.Mb;c.getLength=c.Kb;c.addEventListener=c.r;c.get=c.Bb;c.addEventListener=c.Ib;c=Zc.prototype;c.handlePosition=c.P;})();
 main = $rt_mainStarter(main);
 
 //# sourceMappingURL=classes.js.map
