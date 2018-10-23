@@ -28,13 +28,13 @@ function Qb(){E.call(this);}
 function Bd(){E.call(this);this.C=null;}
 function Sh(b){var $r=new Bd();Bg($r,b);return $r;}
 function Bg($t,a){$t.C=a;Bf($t);}
-function Uf($t,a){var b,c;b=a.coords;c=$t.C;a=Nf();b=Hf(Ag(Tf(Ag(Tf(Uh(),Oh(2)),b.latitude),Oh(3)),b.longitude));a=a.createTextNode($rt_ustr(b));c.appendChild(a);}
+function Uf($t,a){var b,c,d;b=a.coords;c=$t.C;a=Nf();d=Hf(Ag(Tf(Ag(Tf(Ag(Tf(Ag(Tf(Uh(),Oh(2)),b.latitude),Oh(3)),b.longitude),Oh(4)),b.accuracy),Oh(5)),b.heading));a=a.createTextNode($rt_ustr(d));c.appendChild(a);}
 function Mg($t,a){Uf($t,a);}
 function Ob(){E.call(this);}
 function Ad(){E.call(this);this.n=null;}
 function Th(b){var $r=new Ad();Ng($r,b);return $r;}
 function Ng($t,a){$t.n=a;Bf($t);}
-function Ie($t,a){var b,c;a:{switch(a.code){case 1:break;case 2:a=$t.n;b=Nf();c=Oh(4);b=b.createTextNode($rt_ustr(c));a.appendChild(b);break a;case 3:a=$t.n;b=Nf();c=Oh(5);b=b.createTextNode($rt_ustr(c));a.appendChild(b);break a;default:break a;}c=$t.n;a=Nf();b=Oh(6);a=a.createTextNode($rt_ustr(b));c.appendChild(a);}}
+function Ie($t,a){var b,c;a:{switch(a.code){case 1:break;case 2:a=$t.n;b=Nf();c=Oh(6);b=b.createTextNode($rt_ustr(c));a.appendChild(b);break a;case 3:a=$t.n;b=Nf();c=Oh(7);b=b.createTextNode($rt_ustr(c));a.appendChild(b);break a;default:break a;}c=$t.n;a=Nf();b=Oh(8);a=a.createTextNode($rt_ustr(b));c.appendChild(a);}}
 function Vd($t,a){Ie($t,a);}
 function Kb(){E.call(this);}
 function Jc(){E.call(this);this.dc=null;}
@@ -57,7 +57,7 @@ function Hg($t,a){if(a>=0&&a<$t.j.data.length){return $t.j.data[a];}Eh(Zh());}
 function C($t){return $t.j.data.length;}
 function Id($t){return $t.j.data.length!=0?0:1;}
 function D($t,a,b,c,d){var e,f;if(a>=0&&a<=b&&b<=$t.Wb()&&d>=0){c=c.data;if((d+(b-a|0)|0)<=c.length){while(a<b){e=d+1|0;f=a+1|0;c[d]=$t.H(a);d=e;a=f;}return;}}Eh(Ai());}
-function Tg($t,a){var b,c;if($t===a){return 1;}if(a instanceof Db==0){return 0;}b=a;if(C(b)!=C($t)){return 0;}c=0;while(c<C(b)){if(Hg($t,c)!=Hg(b,c)){return 0;}c=c+1|0;}return 1;}
+function Tg($t,a){var b,c;if($t===a){return 1;}if(a instanceof Db==0){return 0;}b=a;if(C(b)!=C($t)){return 0;}c=0;while(true){if(c>=C(b)){return 1;}if(Hg($t,c)!=Hg(b,c)){break;}c=c+1|0;}return 0;}
 function Wf($t){var a,b,c,d;if($t.E==0){a=$t.j.data;b=a.length;c=0;while(c<b){d=a[c];$t.E=(31*$t.E|0)+d|0;c=c+1|0;}}return $t.E;}
 function Md(a){Db_$callClinit();return a;}
 function G($t){var a;a=Dg(Xh,$t);if(a!==null){$t=a;}else{Zd(Xh,$t,$t);}return $t;}
@@ -92,7 +92,7 @@ function Rc($t,a,b){var c;S_$callClinit();Bf($t);$t.J=Ph();$t.y=1;$t.Gb=b;$t.R=a
 function I(a){S_$callClinit();if(Ii!==a){Ii=a;}Ii.B=Fe();}
 function Oe(){S_$callClinit();return Hi;}
 function H(){S_$callClinit();return Ii;}
-function Sd(){Hi=Li(Md(Oh(7)));Ii=Hi;Ji=Long_fromInt(1);Ki=1;}
+function Sd(){Hi=Li(Md(Oh(9)));Ii=Hi;Ji=Long_fromInt(1);Ki=1;}
 function V(){E.call(this);}
 var Ni=null;var Oi=null;var Pi=null;function V_$callClinit(){V_$callClinit=V.$clinit=function(){};
 Be();}
@@ -191,7 +191,7 @@ function Qj(b){var $r=new J();Fc($r,b);return $r;}
 function Nc($t){J_$callClinit();Fc($t,16);}
 function Fc($t,a){J_$callClinit();Bf($t);$t.K=$rt_createCharArray(a);}
 function Kd($t,a){return Xf($t,$t.Ib,a);}
-function Yd($t,a,b){var c,d,e;if(a>=0&&a<=$t.Ib){if(b===null){b=Md(Oh(8));}else if(Id(b)!=0){return $t;}We($t,$t.Ib+C(b)|0);c=$t.Ib-1|0;while(c>=a){$t.K.data[c+C(b)|0]=$t.K.data[c];c=c+ -1|0;}$t.Ib=$t.Ib+C(b)|0;c=0;while(c<C(b)){d=$t.K.data;e=a+1|0;d[a]=Hg(b,c);c=c+1|0;a=e;}return $t;}Eh(Zh());}
+function Yd($t,a,b){var c,d,e;if(a>=0&&a<=$t.Ib){if(b===null){b=Md(Oh(10));}else if(Id(b)!=0){return $t;}We($t,$t.Ib+C(b)|0);c=$t.Ib-1|0;while(c>=a){$t.K.data[c+C(b)|0]=$t.K.data[c];c=c+ -1|0;}$t.Ib=$t.Ib+C(b)|0;c=0;while(c<C(b)){d=$t.K.data;e=a+1|0;d[a]=Hg(b,c);c=c+1|0;a=e;}return $t;}Eh(Zh());}
 function Lg($t,a){return Qe($t,$t.Ib,a);}
 function Sg($t,a,b){var c,d,e,f,g,h,i,j,k,l,m,n,o;if(b===0.0){Re($t,a,a+3|0);c=$t.K.data;d=a+1|0;c[a]=48;c=$t.K.data;a=d+1|0;c[d]=46;$t.K.data[a]=48;return $t;}if(b===0.0){Re($t,a,a+4|0);c=$t.K.data;d=a+1|0;c[a]=45;c=$t.K.data;a=d+1|0;c[d]=48;c=$t.K.data;d=a+1|0;c[a]=46;$t.K.data[d]=48;return $t;}if((isNaN(b)?1:0)!=0){Re($t,a,a+3|0);c=$t.K.data;d=a+1|0;c[a]=78;c=$t.K.data;a=d+1|0;c[d]=97;$t.K.data[a]=78;return $t;}if((!isFinite(b)?1:0)!=0){if(b>0.0){Re($t,a,a+8|0);d=a;}else{Re($t,a,a+9|0);c=$t.K.data;d=a+1|
 0;c[a]=45;}c=$t.K.data;a=d+1|0;c[d]=73;c=$t.K.data;d=a+1|0;c[a]=110;c=$t.K.data;a=d+1|0;c[d]=102;c=$t.K.data;d=a+1|0;c[a]=105;c=$t.K.data;a=d+1|0;c[d]=110;c=$t.K.data;d=a+1|0;c[a]=105;c=$t.K.data;a=d+1|0;c[d]=116;$t.K.data[a]=121;return $t;}e=0;f=1;if(b<0.0){e=1;b= -b;f=2;}g=1;if(b>=1.0){h=256;i=0;j=1.0;d=Jj.data.length-1|0;while(d>=0){k=i|h;if(k<=308&&Jj.data[d]*j<=b){j=j*Jj.data[d];i=k;}h=h>>1;d=d+ -1|0;}l=Long_fromNumber(b/j*1.0E15+0.5);}else{i=256;h=0;j=1.0;d=Lj.data.length-1|0;while(d>=0){k=h|i;if(k<=308
@@ -224,10 +224,10 @@ function Sj(b,c){var $r=new U();Gc($r,b,c);return $r;}
 function Gc($t,a,b){var c,d,e;U_$callClinit();c=b.data;Bf($t);Mf(a);d=c.length;e=0;while(e<d){Mf(c[e]);e=e+1|0;}$t.T=a;$t.L=b.a();}
 function Mf(a){var b,c;U_$callClinit();if(Id(a)!=0){Eh(Tj(a));}if(Of(Hg(a,0))==0){Eh(Tj(a));}b=1;while(b<C(a)){a:{c=Hg(a,b);switch(c){case 43:case 45:case 46:case 58:case 95:break;default:if(Of(c)!=0){break a;}else{Eh(Tj(a));}}}b=b+1|0;}}
 function Of(a){U_$callClinit();return !(a>=48&&a<=57)&&!(a>=97&&a<=122)&&a<65&&a>90?0:1;}
-function Pd(){Rj=Ci();Zd(Rj,Oh(9),Gj());}
+function Pd(){Rj=Ci();Zd(Rj,Oh(11),Gj());}
 function Tc(){U.call(this);}
 function Gj(){var $r=new Tc();Se($r);return $r;}
-function Se($t){Gc($t,Oh(9),Ih(Db,0));}
+function Se($t){Gc($t,Oh(11),Ih(Db,0));}
 function X(){Q.call(this);}
 function Cj(){var $r=new X();Df($r);return $r;}
 function Df($t){Ld($t);}
@@ -267,7 +267,7 @@ function(b,c){return Ue(this,b,c);},"Eb",function(b){return Rf(this,b);},"Nb",fu
 },"ub",function(b){return Tf(this,b);},"Vb",function(b){return Ag(this,b);},"pb",function(b,c){return Ff(this,b,c);},"r",function(b,c){return Ne(this,b,c);},"g",function(){return Hf(this);},"i",function(b){We(this,b);},"d",function(b,c){return Qe(this,b,c);},"f",function(b,c){return Xf(this,b,c);}],U,"java.nio.charset.Charset",E,[W],3073,3,U_$callClinit,["hb",function(b,c){Gc(this,b,c);}],Tc,"java.nio.charset.impl.UTF8Charset",U,[],3072,3,0,["b",function(){Se(this);}],X,"java.lang.IllegalArgumentException",
 Q,[],3072,3,0,["b",function(){Df(this);}],Cd,"java.nio.charset.IllegalCharsetNameException",X,[],3072,3,0,["c",function(b){Xd(this,b);}],Mb,"java.util.Map$Entry",E,[],65,3,0,[],Y,"java.util.MapEntry",E,[Mb,Ib],3072,0,0,["qb",function(b,c){Cf(this,b,c);}],Dd,"java.util.HashMap$HashEntry",Y,[],3072,0,0,["nb",function(b,c){Pf(this,b,c);}],Zc,"java.lang.StringIndexOutOfBoundsException",Jb,[],3072,3,0,["b",function(){Ug(this);}],Lc,"java.lang.Math",E,[],3104,3,0,[],Gd,"java.util.Arrays",E,[],3072,3,0,[],Cb,"java.lang.Number",
 E,[O],3073,3,0,[],Z,"java.lang.Double",Cb,[W],3072,3,Z_$callClinit,[]]);
-$rt_stringPool(["p","This browser doesn\'t support geolocation","Lat/Lon: ","/","Location could not be determined.","A timeout occurred while attempting to determine your location.","The user blocked location access.","main","null","UTF-8"]);
+$rt_stringPool(["p","This browser doesn\'t support geolocation","Lat/Lon: ","/"," accuracy="," heading=","Location could not be determined.","A timeout occurred while attempting to determine your location.","The user blocked location access.","main","null","UTF-8"]);
 var main=Jf;
 (function(){var c;c=Bd.prototype;c.handlePosition=c.S;c=Ad.prototype;c.handlePositionError=c.z;c=Qc.prototype;c.removeEventListener=c.u;c.removeEventListener=c.Hb;c.dispatchEvent=c.Pb;c.getLength=c.Nb;c.addEventListener=c.t;c.get=c.Eb;c.addEventListener=c.Lb;})();
 main = $rt_mainStarter(main);
